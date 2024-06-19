@@ -16,31 +16,549 @@
     <div class="wrapper">
         <!-- Header Start -->
         <header class="header">
-
+            <button type="button" class="btn icon-btn menu-btn">
+                <img src="images/menu-icon.svg" alt="Menu" />
+            </button>
+            <a href="#" title="Wspace" class="logo">
+                <img src="images/logo.svg" class="d-none d-md-block" />
+                <img src="images/mobile-logo.svg" class="d-block d-md-none" />
+            </a>
+            <div class="search-wrapper">
+                <input type="text" class="form-control" placeholder="Search  here.." id="search" />
+                <button type="button" class="btn icon-btn">
+                    <img src="images/search-icon.svg" alt="Search" />
+                </button>
+            </div>
+            <button type="button" class="btn search-btn icon-btn d-lg-none">
+                <img src="images/search-md-icon.svg" alt="Search" />
+            </button>
+            <div class="dropdown notification-menu">
+                <button class="btn icon-btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <img src="images/notification-icon.svg" alt="Notification" />
+                    <span class="badge">1</span>
+                </button>
+                <div class="dropdown-menu">
+                    <div class="notification-header">
+                        <h6 class="pb-0">Notification</h6>
+                        <button type="button" class="btn icon-btn">
+                            <img src="images/menu-refresh-icon.svg" alt="Refresh" />
+                        </button>
+                    </div>
+                    <ul class="notification-list">
+                        <li>
+                            <a class="dropdown-item unread" href="#">
+                                <img src="images/user-img-1.png" alt="User" class="user-img" />
+                                <div class="notification-content">
+                                    <p class="notification-text">Client meeting for hiring</p>
+                                    <p class="time">Oct 3, 2017 9:00 PM</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                <img src="images/user-img-1.png" alt="User" class="user-img" />
+                                <div class="notification-content">
+                                    <p class="notification-text">Salary Credited</p>
+                                    <p class="time">Oct 3, 2017 9:00 PM</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                <img src="images/user-img-1.png" alt="User" class="user-img" />
+                                <div class="notification-content">
+                                    <p class="notification-text">Applied for leaves</p>
+                                    <p class="time">Oct 3, 2017 9:00 PM</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                <img src="images/user-img-1.png" alt="User" class="user-img" />
+                                <div class="notification-content">
+                                    <p class="notification-text">Your workout is complete.</p>
+                                    <p class="time">Oct 3, 2017 9:00 PM</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                <img src="images/user-img-1.png" alt="User" class="user-img" />
+                                <div class="notification-content">
+                                    <p class="notification-text">Staff meeting</p>
+                                    <p class="time">Oct 3, 2017 9:00 PM</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="footer-link">
+                        <a href="#" title="View all">View all</a>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn icon-btn msg-btn">
+                <img src="images/message-icon.svg" alt="Message" />
+            </button>
+            <div class="dropdown profile-menu dropdown-menu-end">
+                <button class="btn  dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="images/user-profile-img.png" />
+                    <p class="name">Hello Rick</p>
+                    <img src="images/user-profile-chevron-down.svg" class="profile-down-icon" />
+                </button>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a class="dropdown-item" href="#" title="Profile">
+                            <img src="images/my-profile-icon.svg" alt="Profile" />
+                            <span>Profile</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#" title="Settings">
+                            <img src="images/setting-icon.svg" alt="Settings" />
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="index.html">
+                            <img src="images/logout-icon.svg" alt="Logout" />
+                            <span>Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </header>
-        <!-- <div class="mobile-search">
+        <div class="mobile-search">
             <input type="text" class="form-control" placeholder="Search" name="search-mobile">
             <button mat-icon-button color="primary" class="search-icon-btn btn">
-                <img src="images/search-icon.svg" />
+                <img src="images/search-white-ic.svg" />
             </button>
         </div>
-        <div class="search-overlay"></div> -->
+        <div class="search-overlay"></div>
         <!-- Header End -->
 
         <!-- Sidebar Start -->
         <aside class="sidebar">
-
+            <ul class="list">
+                <li class="list-item">
+                    <a href="dashboard.html" class="list-link active" title="Dashboard">
+                        <i>
+                            <img src="images/dashboard-default-icon.svg" alt="Dashboard" />
+                            <img src="images/dashboard-active-icon.svg" alt="Dashboard" />
+                        </i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="list-item has-submenu">
+                    <a href="#" class="list-link" title="New Hires">
+                        <i>
+                            <img src="images/new-hires-default-icon.svg" alt="New Hires" />
+                            <img src="images/new-hires-active-icon.svg" alt="New Hires" />
+                        </i>
+                        <span>New Hires</span>
+                        <img src="images/down-icon.svg" alt="Down" class="down-icon" />
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="sub-menu-list">
+                            <a href="#" title="Sub Menu" class="sub-menu-link">Sub Menu</a>
+                        </li>
+                        <li class="sub-menu-list">
+                            <a href="innerpage.html" title="Inner Page" class="sub-menu-link">Inner Page</a>
+                        </li>
+                        <li class="sub-menu-list">
+                            <a href="#" title="Sub Menu" class="sub-menu-link">Sub Menu</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="list-item">
+                    <a href="#" class="list-link" title="Top Perfomances">
+                        <i>
+                            <img src="images/top-perfomances-default-icon.svg" alt="Top Perfomances" />
+                            <img src="images/top-perfomances-active-icon.svg" alt="Top Perfomances" />
+                        </i>
+                        <span>Top Perfomances</span>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="#" class="list-link" title="Settings">
+                        <i>
+                            <img src="images/settings-default-icon.svg" alt="Settings" />
+                            <img src="images/settings-active-icon.svg" alt="Settings" />
+                        </i>
+                        <span>Settings</span>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="#" class="list-link" title="Audit Report">
+                        <i>
+                            <img src="images/audit-report-default-icon.svg" alt="Audit Report" />
+                            <img src="images/audit-report-active-icon.svg" alt="Audit Report" />
+                        </i>
+                        <span>Audit Report</span>
+                    </a>
+                </li>
+            </ul>
         </aside>
         <div class="sidebar-overlay"></div>
         <!-- Sidebar End -->
 
         <main class="main-content">
-
+            <h3 class="page-title" data-aos="fade-in">Dashboard</h3>
+            <div class="row">
+                <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                    <a href="#" title="Technician Hiring" class="statistic-card green">
+                        <i class="icon-block">
+                            <img src="images/technician-hiring-icon.svg" alt="Technician Hiring" />
+                        </i>
+                        <div class="content-block">
+                            <h6>Technician Hiring</h6>
+                            <p>Avg 18 Days to Hire</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                    <a href="#" title="HR Hiring" class="statistic-card pink">
+                        <i class="icon-block">
+                            <img src="images/hr-hiring-icon.svg" alt="HR Hiring" />
+                        </i>
+                        <div class="content-block">
+                            <h6>HR Hiring</h6>
+                            <p>Avg 30 Days to Hire</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                    <a href="#" title="Developer Hiring" class="statistic-card blue">
+                        <i class="icon-block">
+                            <img src="images/developer-hiring-icon.svg" alt="Developer Hiring" />
+                        </i>
+                        <div class="content-block">
+                            <h6>Developer Hiring</h6>
+                            <p>Avg 18 Days to Hire</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+                    <a href="#" title="Designer Hiring" class="statistic-card red">
+                        <i class="icon-block">
+                            <img src="images/designer-hiring-icon.svg" alt="Designer Hiring" />
+                        </i>
+                        <div class="content-block">
+                            <h6>Designer Hiring</h6>
+                            <p>Avg 12 Days to Hire</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-6" data-aos="fade-up" data-aos-delay="600">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5>Employment Eligibility</h5>
+                            <div class="progress-wrapper">
+                                <div class="circle">
+                                    <strong></strong>
+                                </div>
+                                <div class="progress-content">
+                                    <h6>High Priority</h6>
+                                    <ul>
+                                        <li>Employess with from 1-9 due date.</li>
+                                        <li>Employment Receipts expiring withing 90 days.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="row eligibility-row pb-3 pb-md-4 hr">
+                                <div class="col-auto col-xl-4 col-xxl-5 mb-sm-0 mb-2">
+                                    <div class="first-block">
+                                        <div class="icon-block">
+                                            <img src="images/calendar-icon.svg" alt="Deadline" />
+                                        </div>
+                                        <div class="label-value-text">
+                                            <p class="label">Deadline</p>
+                                            <p class="value">5 - days</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col col-xl-8 col-xxl-7">
+                                    <div class="days-block">
+                                        <div class="label-value-text">
+                                            <p class="label">Task Due</p>
+                                            <p class="value">15</p>
+                                        </div>
+                                        <div class="label-value-text">
+                                            <p class="label">Today</p>
+                                            <p class="value">2</p>
+                                        </div>
+                                        <div class="label-value-text">
+                                            <p class="label">1 Days</p>
+                                            <p class="value">4</p>
+                                        </div>
+                                        <div class="label-value-text">
+                                            <p class="label">2 Days</p>
+                                            <p class="value">5</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row eligibility-row pt-3 pt-md-4">
+                                <div class="col-auto col-xl-4 col-xxl-5 mb-sm-0 mb-2">
+                                    <div class="first-block">
+                                        <div class="icon-block">
+                                            <img src="images/refresh-icon.svg" alt="Deadline" />
+                                        </div>
+                                        <div class="label-value-text">
+                                            <p class="label">Reverfication</p>
+                                            <p class="value">1 - 8</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col col-xl-8 col-xxl-7">
+                                    <div class="days-block">
+                                        <div class="label-value-text">
+                                            <p class="label">Task Due</p>
+                                            <p class="value">14</p>
+                                        </div>
+                                        <div class="label-value-text">
+                                            <p class="label">Today</p>
+                                            <p class="value">4</p>
+                                        </div>
+                                        <div class="label-value-text">
+                                            <p class="label">1 Days</p>
+                                            <p class="value">0</p>
+                                        </div>
+                                        <div class="label-value-text">
+                                            <p class="label">2 Days</p>
+                                            <p class="value">4</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6" data-aos="fade-up" data-aos-delay="700">
+                    <div class="card hiring-chart-card">
+                        <div class="card-body">
+                            <h5>Top Hiring Sources Q2</h5>
+                            <div class="hiring-source-chart-outer">
+                                <canvas id="hiringChart" height="100%" width="100%"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card table-card mb-0" data-aos="fade-up" data-aos-delay="800">
+                <div class="table-responsive">
+                    <table class="table" id="datatable1">
+                        <thead>
+                            <tr>
+                                <th>New Hires</th>
+                                <th>Department</th>
+                                <th>Role</th>
+                                <th class="text-center">Experience</th>
+                                <th class="text-center">Technical</th>
+                                <th class="text-center">Joining Status</th>
+                                <th class="text-center">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="user-profile-col">
+                                        <img src="images/user-1.png" alt="">
+                                        <span>Karen Carpent</span>
+                                    </div>
+                                </td>
+                                <td>Networking</td>
+                                <td>Maintanence</td>
+                                <td class="text-center">2 year</td>
+                                <td class="text-center">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="check1" checked />
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="status blue">Not Joined</div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="dropdown">
+                                        <button class="btn dropdown-toggle icon-btn" type="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            <img src="images/action-icon.svg" alt="Action" />
+                                        </button>
+                                        <ul class="dropdown-menu custom-menu dropdown-menu-end">
+                                            <li>
+                                                <a class="dropdown-item" href="#" title="View">
+                                                    <img src="images/view-icon.svg" alt="View" />
+                                                    <span>View</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#" title="Edit">
+                                                    <img src="images/edit-icon.svg" alt="Edit" />
+                                                    <span>Edit</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#" title="Delete">
+                                                    <img src="images/delete-icon.svg" alt="Delete" />
+                                                    <span>Delete</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="user-profile-col">
+                                        <img src="images/user-2.png" alt="">
+                                        <span>Olly laoiss</span>
+                                    </div>
+                                </td>
+                                <td>Admin</td>
+                                <td>QA</td>
+                                <td class="text-center">1 year</td>
+                                <td class="text-center">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="check2" checked />
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="status success">Joined</div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="dropdown">
+                                        <button class="btn dropdown-toggle icon-btn" type="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            <img src="images/action-icon.svg" alt="Action" />
+                                        </button>
+                                        <ul class="dropdown-menu custom-menu dropdown-menu-end">
+                                            <li>
+                                                <a class="dropdown-item" href="#" title="View">
+                                                    <img src="images/view-icon.svg" alt="View" />
+                                                    <span>View</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#" title="Edit">
+                                                    <img src="images/edit-icon.svg" alt="Edit" />
+                                                    <span>Edit</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#" title="Delete">
+                                                    <img src="images/delete-icon.svg" alt="Delete" />
+                                                    <span>Delete</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="user-profile-col">
+                                        <img src="images/user-3.png" alt="">
+                                        <span>Lemoc Bitraa</span>
+                                    </div>
+                                </td>
+                                <td>Customer Support</td>
+                                <td>SRE</td>
+                                <td class="text-center">3 year</td>
+                                <td class="text-center">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="check3" checked />
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="status success">Joined</div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="dropdown">
+                                        <button class="btn dropdown-toggle icon-btn" type="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            <img src="images/action-icon.svg" alt="Action" />
+                                        </button>
+                                        <ul class="dropdown-menu custom-menu dropdown-menu-end">
+                                            <li>
+                                                <a class="dropdown-item" href="#" title="View">
+                                                    <img src="images/view-icon.svg" alt="View" />
+                                                    <span>View</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#" title="Edit">
+                                                    <img src="images/edit-icon.svg" alt="Edit" />
+                                                    <span>Edit</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#" title="Delete">
+                                                    <img src="images/delete-icon.svg" alt="Delete" />
+                                                    <span>Delete</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="user-profile-col">
+                                        <img src="images/user-4.png" alt="">
+                                        <span>Ornee Billas</span>
+                                    </div>
+                                </td>
+                                <td>Finance</td>
+                                <td>Developer</td>
+                                <td class="text-center">2 year</td>
+                                <td class="text-center">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="check4" checked />
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="status blue">Not Joined</div>
+                                </td>
+                                <td class="text-center">
+                                    <div class="dropdown">
+                                        <button class="btn dropdown-toggle icon-btn" type="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            <img src="images/action-icon.svg" alt="Action" />
+                                        </button>
+                                        <ul class="dropdown-menu custom-menu dropdown-menu-end">
+                                            <li>
+                                                <a class="dropdown-item" href="#" title="View">
+                                                    <img src="images/view-icon.svg" alt="View" />
+                                                    <span>View</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#" title="Edit">
+                                                    <img src="images/edit-icon.svg" alt="Edit" />
+                                                    <span>Edit</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#" title="Delete">
+                                                    <img src="images/delete-icon.svg" alt="Delete" />
+                                                    <span>Delete</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </main>
 
         <!-- Footer Start -->
         <footer class="footer">
-            <p>V 1.1.0 | Copyright 2022. All rights reserved</p>
+            <p>Ⓒ Copyright 2023.All Rights Reserved | Terms of Use</p>
         </footer>
         <!-- Footer End -->
     </div>

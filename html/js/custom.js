@@ -45,6 +45,18 @@ $(document).ready(function () {
     $("body").removeClass("toggle-menu");
   });
 
+  // Submenu
+  $(".list-link").click(function () {
+    if ($(this).parent().hasClass("has-submenu")) {
+      $(this).parent().siblings().find(".sub-menu").slideUp();
+      $(this).parent().siblings().removeClass("open-menu");
+      $(this).siblings().slideToggle();
+      $(this).parent().toggleClass("open-menu");
+    } else {
+      $(this).parent().siblings().find(".sub-menu").slideUp();
+    }
+  });
+
   // Search
   $(".search-btn").on("click", function (e) {
     $("body").toggleClass("open-search");
@@ -53,149 +65,109 @@ $(document).ready(function () {
     $("body").removeClass("open-search");
   });
 
-  // Sales Chart
-  // let dataChartCanvas = document.getElementById("dataChart");
-  // if (dataChartCanvas) {
-  //   var ctx = dataChartCanvas.getContext("2d");
-  //   var data = {
-  //     labels: ["2018", "2019", "2020", "2021", "2022"],
-  //     datasets: [
-  //       {
-  //         data: [20, 55, 75, 35, 78],
-  //         borderColor: "#48A846",
-  //         pointBorderColor: "#48A846",
-  //         tension: 0.4,
-  //         pointRadius: 4,
-  //         pointBackgroundColor: "#48A846",
-  //       },
-  //       {
-  //         data: [77, 19, 65, 85, 65],
-  //         borderColor: "#2B9EB3",
-  //         tension: 0.4,
-  //         pointRadius: 4,
-  //         pointBorderColor: "#2B9EB3",
-  //         pointBackgroundColor: "#2B9EB3",
-  //       },
-  //     ],
-  //   };
-  //   var options = {
-  //     maintainAspectRatio: false,
-  //     plugins: {
-  //       legend: {
-  //         display: false,
-  //       },
-  //       tooltip: {
-  //         backgroundColor: "#333333",
-  //         yAlign: "bottom",
-  //         xAlign: "center",
-  //         displayColors: false,
-  //         cornerRadius: 18,
-  //         titleMarginBottom: 0,
-  //         titleSpacing: 0,
-  //         caretSize: 6,
-  //         caretPadding: 5,
-  //         titleFont: {
-  //           size: 0,
-  //           lineHeight: 0,
-  //         },
-  //         padding: {
-  //           top: 6,
-  //           bottom: 6,
-  //           left: 14,
-  //           right: 14,
-  //         },
-  //         bodyFont: {
-  //           size: 12,
-  //           lineHeight: "20px",
-  //           weight: "500",
-  //         },
-  //       },
-  //     },
-  //     scales: {
-  //       x: {
-  //         ticks: {
-  //           color: "#666666",
-  //           font: {
-  //             size: 12,
-  //             lineHeight: "18px",
-  //           },
-  //           padding: 8,
-  //         },
-  //         grid: {
-  //           drawTicks: false,
-  //           color: "#E6E6E6",
-  //         },
-  //         border: {
-  //           display: false,
-  //         },
-  //       },
-  //       y: {
-  //         ticks: {
-  //           color: "#666666",
-  //           font: {
-  //             size: 12,
-  //             lineHeight: "18px",
-  //           },
-  //           padding: 8,
-  //           stepSize: 20,
-  //         },
-  //         grid: {
-  //           drawTicks: false,
-  //           color: "#E6E6E6",
-  //         },
-  //         border: {
-  //           display: false,
-  //         },
-  //       },
-  //     },
-  //     animation: {
-  //       duration: 2000,
-  //       easing: "easeOutSine",
-  //     },
-  //   };
-  //   var dataChart = new Chart(ctx, {
-  //     type: "line",
-  //     data: data,
-  //     options: options,
-  //   });
-  // }
-
-  // Device Chart
-  // let deviceChartCanvas = document.getElementById("deviceChart");
-  // if (deviceChartCanvas) {
-  //   var ctx = deviceChartCanvas.getContext("2d");
-  //   var data = {
-  //     labels: ["35%", "15%", "50%"],
-  //     datasets: [
-  //       {
-  //         label: "My First Dataset",
-  //         data: [35, 15, 50],
-  //         backgroundColor: ["#0C4FFA", "#48A846", "#F03B3D"],
-  //         hoverOffset: 4,
-  //         borderWidth: 0,
-  //       },
-  //     ],
-  //   };
-  //   var options = {
-  //     maintainAspectRatio: false,
-  //     cutout: 88,
-  //     offset: 6,
-  //     plugins: {
-  //       legend: {
-  //         display: false,
-  //       },
-  //     },
-  //     animation: {
-  //       duration: 2000,
-  //       easing: "easeOutSine",
-  //     },
-  //   };
-  //   var deviceChart = new Chart(ctx, {
-  //     type: "doughnut",
-  //     data: data,
-  //     options: options,
-  //   });
-  // }
+  // Hiring Chart
+  let hiringChartCanvas = document.getElementById("hiringChart");
+  if (hiringChartCanvas) {
+    var ctx = hiringChartCanvas.getContext("2d");
+    var data = {
+      labels: [
+        "Direct",
+        "Linkdin",
+        "Referral",
+        "Twitter",
+        "Hired",
+        "College",
+        "Naukri",
+      ],
+      datasets: [
+        {
+          data: [31, 22, 18, 25, 25, 20, 20],
+          backgroundColor: "#37CADE",
+          barThickness: 12,
+          label: "Technical",
+        },
+        {
+          data: [10, 5, 10, 10, 12, 7, 7],
+          backgroundColor: "#86E8F5",
+          barThickness: 12,
+          label: "Non-Technical",
+        },
+      ],
+    };
+    var options = {
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          position: "bottom",
+          align: "center",
+          labels: {
+            color: "#606060",
+            boxWidth: 10,
+            boxHeight: 10,
+            borderRadius: 5,
+            useBorderRadius: true,
+            padding: 16,
+            font: {
+              size: 12,
+              lineHeight: 18,
+              weight: 500,
+              family: "'Poppins', sans-serif",
+            },
+          },
+        },
+      },
+      scales: {
+        x: {
+          ticks: {
+            color: "#989898",
+            font: {
+              size: 12,
+              lineHeight: "18px",
+              family: "'Poppins', sans-serif",
+            },
+            padding: 8,
+          },
+          grid: {
+            drawTicks: false,
+            display: false,
+          },
+          border: {
+            color: "#E2E2E2",
+          },
+          stacked: true,
+        },
+        y: {
+          ticks: {
+            color: "#989898",
+            font: {
+              size: 12,
+              lineHeight: "18px",
+              family: "'Poppins', sans-serif",
+            },
+            padding: 8,
+            stepSize: 10,
+          },
+          grid: {
+            drawTicks: false,
+            display: false,
+          },
+          border: {
+            color: "#E2E2E2",
+          },
+          stacked: true,
+        },
+      },
+      animation: {
+        duration: 2000,
+        easing: "easeOutSine",
+      },
+    };
+    var hiringChart = new Chart(ctx, {
+      type: "bar",
+      data: data,
+      options: options,
+    });
+  }
 
   // Select2
   // $(".custom-select").select2({
@@ -203,8 +175,27 @@ $(document).ready(function () {
   //   dropdownCssClass: "custom-select-menu",
   //   laceholder: "This is my placeholder",
   // });
+
   // CountUp
   $(".numbers").counterUp();
+
+  // Circular Progress
+  $(".circle")
+    .circleProgress({
+      value: 0.6,
+      size: 106,
+      fill: "#24B0C3",
+      startAngle: 29.9,
+      thickness: 8,
+      lineCap: "round",
+      emptyFill: "#E5E5E5",
+      animation: { duration: 2000, easing: "circleProgressEasing" },
+    })
+    .on("circle-animation-progress", function (event, progress) {
+      $(this)
+        .find("strong")
+        .html(Math.round(60 * progress) + "<i>%</i>");
+    });
 
   // Password Toggle
   $(".password-btn").click(function () {
@@ -218,24 +209,37 @@ $(document).ready(function () {
     }
   });
 
+  // Datatable
   $("#datatable1").DataTable({
     sort: false,
     filter: false,
     info: false,
     autoWidth: false,
-    dom: '<"top">rt<"bottom"flip><"clear">',
     paging: false,
+    layout: {
+      topStart: null,
+      top: null,
+      topEnd: null,
+      bottomStart: null,
+      bottom: null,
+      bottomEnd: null,
+    },
   });
 
-  var dataTable2 = $("#datatable2").DataTable({
+  $("#datatable2").DataTable({
     sort: false,
-    dom: '<"top">rt<"bottom custom-pagination"flip><"clear">',
     filter: false,
-    info: true,
+    info: false,
     autoWidth: false,
     pagingType: "full_numbers",
-    pageLength: 10,
+    pageLength: 5,
     order: [[0, ""]],
+    layout: {
+      topStart: null,
+      top: null,
+      topEnd: null,
+      bottomStart: "pageLength",
+    },
     language: {
       info: "_START_-_END_ of _TOTAL_",
       paginate: {
@@ -245,30 +249,9 @@ $(document).ready(function () {
           '<img src="images/prev-active-icon.svg" class="active-icon" alt="Prev"/><img src="images/prev-disabled-icon.svg" class="default-icon" alt="Prev"/>',
         next: '<img src="images/next-active-icon.svg" class="active-icon" alt="Next"/><img src="images/next-disabled-icon.svg" class="default-icon" alt="Next"/>',
       },
-      lengthMenu: "",
+      lengthMenu: "_MENU_ Records per page",
     },
-  });
-  let $paginationNav = $(".pagination-nav");
-  let $customPagination = $(".custom-pagination");
-  if ($paginationNav) {
-    $paginationNav.append($customPagination);
-  }
-  $paginationNav.prepend(`
-    <div class="datatable-length-custom">
-    <span class="pagination-label">Rows per page: </span>
-      <select class="paging-select" id="customLengthMenu">
-        <option value="10">10</option>
-        <option value="15">15</option>
-        <option value="20">20</option>
-        <option value="25">25</option>
-      </select>
-    </div>
-  `);
-  // Handle change in the custom length menu
-  $("#customLengthMenu").on("change", function () {
-    let pageLength = $(this).val();
-    let table = $("#datatable2").DataTable();
-    table.page.len(pageLength).draw();
+    lengthMenu: [5, 10, 15],
   });
 
   // AOS Initialize
@@ -276,6 +259,7 @@ $(document).ready(function () {
     once: true,
     duration: 600,
   });
+
   // Don't add anything below this --------------------------------------------------------------
   // Add Class on Window Load
   $("body").addClass("page-loaded");

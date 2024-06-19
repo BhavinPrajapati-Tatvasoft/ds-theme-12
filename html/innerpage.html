@@ -16,30 +16,864 @@
     <div class="wrapper">
         <!-- Header Start -->
         <header class="header">
-        </header>
-        <!-- <div class="mobile-search">
-            <input type="text" class="form-control" placeholder="Search" name="search-mobile" />
-            <button mat-icon-button color="primary" class="search-icon-btn btn">
-                <img src="images/search-icon.svg" />
+            <button type="button" class="btn icon-btn menu-btn">
+                <img src="images/menu-icon.svg" alt="Menu" />
             </button>
-        </div> -->
+            <a href="#" title="Wspace" class="logo">
+                <img src="images/logo.svg" class="d-none d-md-block" />
+                <img src="images/mobile-logo.svg" class="d-block d-md-none" />
+            </a>
+            <div class="search-wrapper">
+                <input type="text" class="form-control" placeholder="Search  here.." id="search" />
+                <button type="button" class="btn icon-btn">
+                    <img src="images/search-icon.svg" alt="Search" />
+                </button>
+            </div>
+            <button type="button" class="btn search-btn icon-btn d-lg-none">
+                <img src="images/search-md-icon.svg" alt="Search" />
+            </button>
+            <div class="dropdown notification-menu">
+                <button class="btn icon-btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <img src="images/notification-icon.svg" alt="Notification" />
+                    <span class="badge">1</span>
+                </button>
+                <div class="dropdown-menu">
+                    <div class="notification-header">
+                        <h6 class="pb-0">Notification</h6>
+                        <button type="button" class="btn icon-btn">
+                            <img src="images/menu-refresh-icon.svg" alt="Refresh" />
+                        </button>
+                    </div>
+                    <ul class="notification-list">
+                        <li>
+                            <a class="dropdown-item unread" href="#">
+                                <img src="images/user-img-1.png" alt="User" class="user-img" />
+                                <div class="notification-content">
+                                    <p class="notification-text">Client meeting for hiring</p>
+                                    <p class="time">Oct 3, 2017 9:00 PM</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                <img src="images/user-img-1.png" alt="User" class="user-img" />
+                                <div class="notification-content">
+                                    <p class="notification-text">Salary Credited</p>
+                                    <p class="time">Oct 3, 2017 9:00 PM</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                <img src="images/user-img-1.png" alt="User" class="user-img" />
+                                <div class="notification-content">
+                                    <p class="notification-text">Applied for leaves</p>
+                                    <p class="time">Oct 3, 2017 9:00 PM</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                <img src="images/user-img-1.png" alt="User" class="user-img" />
+                                <div class="notification-content">
+                                    <p class="notification-text">Your workout is complete.</p>
+                                    <p class="time">Oct 3, 2017 9:00 PM</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                <img src="images/user-img-1.png" alt="User" class="user-img" />
+                                <div class="notification-content">
+                                    <p class="notification-text">Staff meeting</p>
+                                    <p class="time">Oct 3, 2017 9:00 PM</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="footer-link">
+                        <a href="#" title="View all">View all</a>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn icon-btn msg-btn">
+                <img src="images/message-icon.svg" alt="Message" />
+            </button>
+            <div class="dropdown profile-menu dropdown-menu-end">
+                <button class="btn  dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="images/user-profile-img.png" />
+                    <p class="name">Hello Rick</p>
+                    <img src="images/user-profile-chevron-down.svg" class="profile-down-icon" />
+                </button>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a class="dropdown-item" href="#" title="Profile">
+                            <img src="images/my-profile-icon.svg" alt="Profile" />
+                            <span>Profile</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#" title="Settings">
+                            <img src="images/setting-icon.svg" alt="Settings" />
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="index.html">
+                            <img src="images/logout-icon.svg" alt="Logout" />
+                            <span>Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <div class="mobile-search">
+            <input type="text" class="form-control" placeholder="Search" name="search-mobile">
+            <button mat-icon-button color="primary" class="search-icon-btn btn">
+                <img src="images/search-white-ic.svg" />
+            </button>
+        </div>
         <div class="search-overlay"></div>
         <!-- Header End -->
 
         <!-- Sidebar Start -->
         <aside class="sidebar">
-
+            <ul class="list">
+                <li class="list-item">
+                    <a href="dashboard.html" class="list-link" title="Dashboard">
+                        <i>
+                            <img src="images/dashboard-default-icon.svg" alt="Dashboard" />
+                            <img src="images/dashboard-active-icon.svg" alt="Dashboard" />
+                        </i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="list-item has-submenu">
+                    <a href="#" class="list-link active" title="New Hires">
+                        <i>
+                            <img src="images/new-hires-default-icon.svg" alt="New Hires" />
+                            <img src="images/new-hires-active-icon.svg" alt="New Hires" />
+                        </i>
+                        <span>New Hires</span>
+                        <img src="images/down-icon.svg" alt="Down" class="down-icon" />
+                    </a>
+                    <ul class="sub-menu">
+                        <li class="sub-menu-list">
+                            <a href="#" title="Sub Menu" class="sub-menu-link">Sub Menu</a>
+                        </li>
+                        <li class="sub-menu-list">
+                            <a href="innerpage.html" title="Inner Page" class="sub-menu-link active">Inner Page</a>
+                        </li>
+                        <li class="sub-menu-list">
+                            <a href="#" title="Sub Menu" class="sub-menu-link">Sub Menu</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="list-item">
+                    <a href="#" class="list-link" title="Top Perfomances">
+                        <i>
+                            <img src="images/top-perfomances-default-icon.svg" alt="Top Perfomances" />
+                            <img src="images/top-perfomances-active-icon.svg" alt="Top Perfomances" />
+                        </i>
+                        <span>Top Perfomances</span>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="#" class="list-link" title="Settings">
+                        <i>
+                            <img src="images/settings-default-icon.svg" alt="Settings" />
+                            <img src="images/settings-active-icon.svg" alt="Settings" />
+                        </i>
+                        <span>Settings</span>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="#" class="list-link" title="Audit Report">
+                        <i>
+                            <img src="images/audit-report-default-icon.svg" alt="Audit Report" />
+                            <img src="images/audit-report-active-icon.svg" alt="Audit Report" />
+                        </i>
+                        <span>Audit Report</span>
+                    </a>
+                </li>
+            </ul>
         </aside>
         <div class="sidebar-overlay"></div>
         <!-- Sidebar End -->
 
         <main class="main-content">
-
+            <h3 class="page-title" data-aos="fade-in">Inner page</h3>
+            <div class="card table-card" data-aos="fade-up" data-aos-delay="100">
+                <table class="table" id="datatable2">
+                    <thead>
+                        <tr>
+                            <th>New Hires</th>
+                            <th>Department</th>
+                            <th>Role</th>
+                            <th class="text-center">Experience</th>
+                            <th class="text-center">Technical</th>
+                            <th class="text-center">Joining Status</th>
+                            <th class="text-center">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="user-profile-col">
+                                    <img src="images/user-1.png" alt="">
+                                    <span>Karen Carpent</span>
+                                </div>
+                            </td>
+                            <td>Networking</td>
+                            <td>Maintanence</td>
+                            <td class="text-center">2 year</td>
+                            <td class="text-center">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="check1" checked />
+                                </div>
+                            </td>
+                            <td class="text-center">
+                                <div class="status blue">Not Joined</div>
+                            </td>
+                            <td class="text-center">
+                                <div class="dropdown">
+                                    <button class="btn dropdown-toggle icon-btn" type="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        <img src="images/action-icon.svg" alt="Action" />
+                                    </button>
+                                    <ul class="dropdown-menu custom-menu dropdown-menu-end">
+                                        <li>
+                                            <a class="dropdown-item" href="#" title="View">
+                                                <img src="images/view-icon.svg" alt="View" />
+                                                <span>View</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="#" title="Edit">
+                                                <img src="images/edit-icon.svg" alt="Edit" />
+                                                <span>Edit</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="#" title="Delete">
+                                                <img src="images/delete-icon.svg" alt="Delete" />
+                                                <span>Delete</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="user-profile-col">
+                                    <img src="images/user-2.png" alt="">
+                                    <span>Olly laoiss</span>
+                                </div>
+                            </td>
+                            <td>Admin</td>
+                            <td>QA</td>
+                            <td class="text-center">1 year</td>
+                            <td class="text-center">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="check2" checked />
+                                </div>
+                            </td>
+                            <td class="text-center">
+                                <div class="status success">Joined</div>
+                            </td>
+                            <td class="text-center">
+                                <div class="dropdown">
+                                    <button class="btn dropdown-toggle icon-btn" type="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        <img src="images/action-icon.svg" alt="Action" />
+                                    </button>
+                                    <ul class="dropdown-menu custom-menu dropdown-menu-end">
+                                        <li>
+                                            <a class="dropdown-item" href="#" title="View">
+                                                <img src="images/view-icon.svg" alt="View" />
+                                                <span>View</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="#" title="Edit">
+                                                <img src="images/edit-icon.svg" alt="Edit" />
+                                                <span>Edit</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="#" title="Delete">
+                                                <img src="images/delete-icon.svg" alt="Delete" />
+                                                <span>Delete</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="user-profile-col">
+                                    <img src="images/user-3.png" alt="">
+                                    <span>Lemoc Bitraa</span>
+                                </div>
+                            </td>
+                            <td>Customer Support</td>
+                            <td>SRE</td>
+                            <td class="text-center">3 year</td>
+                            <td class="text-center">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="check3" checked />
+                                </div>
+                            </td>
+                            <td class="text-center">
+                                <div class="status success">Joined</div>
+                            </td>
+                            <td class="text-center">
+                                <div class="dropdown">
+                                    <button class="btn dropdown-toggle icon-btn" type="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        <img src="images/action-icon.svg" alt="Action" />
+                                    </button>
+                                    <ul class="dropdown-menu custom-menu dropdown-menu-end">
+                                        <li>
+                                            <a class="dropdown-item" href="#" title="View">
+                                                <img src="images/view-icon.svg" alt="View" />
+                                                <span>View</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="#" title="Edit">
+                                                <img src="images/edit-icon.svg" alt="Edit" />
+                                                <span>Edit</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="#" title="Delete">
+                                                <img src="images/delete-icon.svg" alt="Delete" />
+                                                <span>Delete</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="user-profile-col">
+                                    <img src="images/user-4.png" alt="">
+                                    <span>Ornee Billas</span>
+                                </div>
+                            </td>
+                            <td>Finance</td>
+                            <td>Developer</td>
+                            <td class="text-center">2 year</td>
+                            <td class="text-center">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="check4" checked />
+                                </div>
+                            </td>
+                            <td class="text-center">
+                                <div class="status blue">Not Joined</div>
+                            </td>
+                            <td class="text-center">
+                                <div class="dropdown">
+                                    <button class="btn dropdown-toggle icon-btn" type="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        <img src="images/action-icon.svg" alt="Action" />
+                                    </button>
+                                    <ul class="dropdown-menu custom-menu dropdown-menu-end">
+                                        <li>
+                                            <a class="dropdown-item" href="#" title="View">
+                                                <img src="images/view-icon.svg" alt="View" />
+                                                <span>View</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="#" title="Edit">
+                                                <img src="images/edit-icon.svg" alt="Edit" />
+                                                <span>Edit</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="#" title="Delete">
+                                                <img src="images/delete-icon.svg" alt="Delete" />
+                                                <span>Delete</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="user-profile-col">
+                                    <img src="images/user-1.png" alt="">
+                                    <span>Karen Carpent</span>
+                                </div>
+                            </td>
+                            <td>Networking</td>
+                            <td>Maintanence</td>
+                            <td class="text-center">2 year</td>
+                            <td class="text-center">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="check5" checked />
+                                </div>
+                            </td>
+                            <td class="text-center">
+                                <div class="status blue">Not Joined</div>
+                            </td>
+                            <td class="text-center">
+                                <div class="dropdown">
+                                    <button class="btn dropdown-toggle icon-btn" type="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        <img src="images/action-icon.svg" alt="Action" />
+                                    </button>
+                                    <ul class="dropdown-menu custom-menu dropdown-menu-end">
+                                        <li>
+                                            <a class="dropdown-item" href="#" title="View">
+                                                <img src="images/view-icon.svg" alt="View" />
+                                                <span>View</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="#" title="Edit">
+                                                <img src="images/edit-icon.svg" alt="Edit" />
+                                                <span>Edit</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="#" title="Delete">
+                                                <img src="images/delete-icon.svg" alt="Delete" />
+                                                <span>Delete</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="user-profile-col">
+                                    <img src="images/user-2.png" alt="">
+                                    <span>Olly laoiss</span>
+                                </div>
+                            </td>
+                            <td>Admin</td>
+                            <td>QA</td>
+                            <td class="text-center">1 year</td>
+                            <td class="text-center">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="check6" checked />
+                                </div>
+                            </td>
+                            <td class="text-center">
+                                <div class="status success">Joined</div>
+                            </td>
+                            <td class="text-center">
+                                <div class="dropdown">
+                                    <button class="btn dropdown-toggle icon-btn" type="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        <img src="images/action-icon.svg" alt="Action" />
+                                    </button>
+                                    <ul class="dropdown-menu custom-menu dropdown-menu-end">
+                                        <li>
+                                            <a class="dropdown-item" href="#" title="View">
+                                                <img src="images/view-icon.svg" alt="View" />
+                                                <span>View</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="#" title="Edit">
+                                                <img src="images/edit-icon.svg" alt="Edit" />
+                                                <span>Edit</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="#" title="Delete">
+                                                <img src="images/delete-icon.svg" alt="Delete" />
+                                                <span>Delete</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="user-profile-col">
+                                    <img src="images/user-3.png" alt="">
+                                    <span>Lemoc Bitraa</span>
+                                </div>
+                            </td>
+                            <td>Customer Support</td>
+                            <td>SRE</td>
+                            <td class="text-center">3 year</td>
+                            <td class="text-center">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="check7" checked />
+                                </div>
+                            </td>
+                            <td class="text-center">
+                                <div class="status success">Joined</div>
+                            </td>
+                            <td class="text-center">
+                                <div class="dropdown">
+                                    <button class="btn dropdown-toggle icon-btn" type="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        <img src="images/action-icon.svg" alt="Action" />
+                                    </button>
+                                    <ul class="dropdown-menu custom-menu dropdown-menu-end">
+                                        <li>
+                                            <a class="dropdown-item" href="#" title="View">
+                                                <img src="images/view-icon.svg" alt="View" />
+                                                <span>View</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="#" title="Edit">
+                                                <img src="images/edit-icon.svg" alt="Edit" />
+                                                <span>Edit</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="#" title="Delete">
+                                                <img src="images/delete-icon.svg" alt="Delete" />
+                                                <span>Delete</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="user-profile-col">
+                                    <img src="images/user-4.png" alt="">
+                                    <span>Ornee Billas</span>
+                                </div>
+                            </td>
+                            <td>Finance</td>
+                            <td>Developer</td>
+                            <td class="text-center">2 year</td>
+                            <td class="text-center">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="check8" checked />
+                                </div>
+                            </td>
+                            <td class="text-center">
+                                <div class="status blue">Not Joined</div>
+                            </td>
+                            <td class="text-center">
+                                <div class="dropdown">
+                                    <button class="btn dropdown-toggle icon-btn" type="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        <img src="images/action-icon.svg" alt="Action" />
+                                    </button>
+                                    <ul class="dropdown-menu custom-menu dropdown-menu-end">
+                                        <li>
+                                            <a class="dropdown-item" href="#" title="View">
+                                                <img src="images/view-icon.svg" alt="View" />
+                                                <span>View</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="#" title="Edit">
+                                                <img src="images/edit-icon.svg" alt="Edit" />
+                                                <span>Edit</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="#" title="Delete">
+                                                <img src="images/delete-icon.svg" alt="Delete" />
+                                                <span>Delete</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="card mb-0" data-aos="fade-up" data-aos-delay="200">
+                <div class="card-body">
+                    <h4 class="section-heading">
+                        One Column
+                    </h4>
+                    <div class="row secondary-row">
+                        <div class="col-12">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="fName" placeholder="First Name" />
+                                <label for="fName">First Name</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="lName" placeholder="Last Name"
+                                    value="Anna" />
+                                <label for="lName">Last Name</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-floating">
+                                <textarea name="" rows="4" class="form-control" id="textarea"
+                                    placeholder="Ready...">Ready...</textarea>
+                                <label for="lName">Comment</label>
+                            </div>
+                        </div>
+                    </div>
+                    <h4 class="section-heading">
+                        Two Column
+                    </h4>
+                    <div class="row secondary-row">
+                        <div class="col-sm-6">
+                            <div class="form-floating">
+                                <input type="email" class="form-control" id="email" placeholder="Email" />
+                                <label for="email">Email</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="accNumber" placeholder="Account Number" />
+                                <label for="accNumber">Account Number</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-floating password-field">
+                                <input type="password" autocomplete="new-password" class="form-control password-input"
+                                    id="password" placeholder="Password" value="123456">
+                                <label for="password">Password</label>
+                                <button type="button" class="btn icon-btn password-btn">
+                                    <img src="images/hide-password-icon.svg" alt="Hide Password" class="hide-password">
+                                    <img src="images/show-password-icon.svg" alt="Show Password" class="show-password">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-floating">
+                                <input type="text" class="form-control is-invalid" id="companyName"
+                                    placeholder="Comapny Name" />
+                                <label for="companyName">Comapny Name</label>
+                                <div id="validationServerUsernameFeedback" class="invalid-feedback">
+                                    Supporting text
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h4 class="section-heading">
+                        Three Column
+                    </h4>
+                    <div class="row secondary-row">
+                        <div class="col-sm-6 col-md-4">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="fullName" placeholder="Full Name" />
+                                <label for="fullName">Full Name</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4">
+                            <div class="form-floating">
+                                <select class="form-select" id="title">
+                                    <option selected value="1">Mr</option>
+                                    <option value="2">Mrs</option>
+                                    <option value="3">Miss</option>
+                                </select>
+                                <label for="title">Title</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="occupation" placeholder="Occupation"
+                                    value="Developer" />
+                                <label for="occupation">Occupation</label>
+                            </div>
+                        </div>
+                    </div>
+                    <h4 class="section-heading">
+                        Four Column
+                    </h4>
+                    <div class="row secondary-row">
+                        <div class="col-sm-6 col-md-4 col-lg-3">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="nickName" placeholder="Nick Name" />
+                                <label for="nickName">Nick Name</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4 col-lg-3">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="locaiton" value="India"
+                                    placeholder="Locaiton" />
+                                <label for="locaiton">Locaiton</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4 col-lg-3">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="state" placeholder="State" />
+                                <label for="state">State</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4 col-lg-3">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="city" placeholder="City" />
+                                <label for="city">City</label>
+                            </div>
+                        </div>
+                    </div>
+                    <h4 class="section-heading pb-4">
+                        Other Elements
+                    </h4>
+                    <h6 class="small-heading pb-12">
+                        File Upload
+                    </h6>
+                    <div class="file-upload-outer">
+                        <div class="upload-btn">
+                            <input type="file" />
+                            <img src="images/file-upload-icon.svg" alt="Upload" />
+                            <span>Upload</span>
+                        </div>
+                        <p>No Item Selected</p>
+                    </div>
+                    <h6 class="small-heading pb-12">
+                        Radio Button
+                    </h6>
+                    <div class="radio-grp">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="radioOption" id="radio1" checked />
+                            <label class="form-check-label" for="radio1">
+                                Option 1
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="radioOption" id="radio2" />
+                            <label class="form-check-label" for="radio2">
+                                Option 2
+                            </label>
+                        </div>
+                    </div>
+                    <h6 class="small-heading pb-12">
+                        Checkbox
+                    </h6>
+                    <div class="checkbox-outer">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="option1" checked />
+                            <label class="form-check-label" for="option1">
+                                Option 1
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="Option2" />
+                            <label class="form-check-label" for="Option2">
+                                Option 2
+                            </label>
+                        </div>
+                    </div>
+                    <h6 class="small-heading pb-12">
+                        Toggle Button
+                    </h6>
+                    <div class="switch-outer">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" role="switch" id="onSwitch" checked />
+                            <label class="form-check-label" for="onSwitch">On</label>
+                        </div>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" role="switch" id="offSwitch" />
+                            <label class="form-check-label" for="offSwitch">Off</label>
+                        </div>
+                    </div>
+                    <h6 class="small-heading pb-12">
+                        Snack Bar
+                    </h6>
+                    <div class="row alert-row">
+                        <div class="col-md-6">
+                            <div class="alert alert-success alert-dismissible" role="alert">
+                                <img src="images/alert-success-icon.svg" alt="Success" />
+                                <span>This is a success message</span>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                    aria-label="Close"></button>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="alert alert-warning alert-dismissible" role="alert">
+                                <img src="images/alert-warning-icon.svg" alt="Warning" />
+                                <span>This is an alert message</span>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                    aria-label="Close"></button>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="alert alert-info alert-dismissible" role="alert">
+                                <img src="images/alert-info-icon.svg" alt="Info" />
+                                <span>This is an info message</span>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                    aria-label="Close"></button>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="alert alert-danger alert-dismissible" role="alert">
+                                <img src="images/alert-error-icon.svg" alt="Error" />
+                                <span>This is an error message</span>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                    aria-label="Close"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <h6 class="small-heading pb-12">
+                        Buttons
+                    </h6>
+                    <div class="btn-grp">
+                        <button type="button" class="btn btn-primary">
+                            <span>Primary Button</span>
+                        </button>
+                        <button type="button" class="btn btn-outline-primary">
+                            <span>Secondary Button</span>
+                        </button>
+                    </div>
+                    <h6 class="small-heading pb-12">
+                        Tabs
+                    </h6>
+                    <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="pills-tab1-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-tab1" type="button" role="tab" aria-controls="pills-tab1"
+                                aria-selected="true">Tab 1</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="pills-tab2-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-tab2" type="button" role="tab" aria-controls="pills-tab2"
+                                aria-selected="false">Tab 2</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="pills-tab1" role="tabpanel"
+                            aria-labelledby="pills-tab1-tab" tabindex="0">
+                            <p>On the other hand, we denounce with righteous indignation and dislike men who are so
+                                beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire,
+                                that they cannot foresee the pain and trouble that are bound to ensue; and equal blame
+                                belongs to those who fail in their duty through weakness of will, which is the same as
+                                saying through shrinking from toil and pain.</p>
+                            <p>On the other hand, we denounce with righteous indignation and dislike men who are so
+                                beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire.
+                            </p>
+                        </div>
+                        <div class="tab-pane fade" id="pills-tab2" role="tabpanel" aria-labelledby="pills-tab2-tab"
+                            tabindex="0">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda aperiam
+                                consequatur voluptatem, eos earum quasi at velit eum ea odit.Lorem ipsum dolor sit amet
+                                consectetur adipisicing elit. Assumenda aperiam consequatur voluptatem, eos earum quasi
+                                at velit eum ea odit.</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, iste.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </main>
 
+        <!-- Footer Start -->
         <footer class="footer">
-            <p>©2022 Company. All rights reserved.</p>
+            <p>Ⓒ Copyright 2023.All Rights Reserved | Terms of Use</p>
         </footer>
+        <!-- Footer End -->
     </div>
 
     <!-- JavaScripts -->
