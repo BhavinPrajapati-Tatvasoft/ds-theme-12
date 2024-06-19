@@ -64,7 +64,6 @@ export default {
         maintainAspectRatio: false,
         plugins: {
           legend: {
-            // display: false,
             position: "bottom",
             align: "center",
             labels: {
